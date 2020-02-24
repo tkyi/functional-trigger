@@ -1,14 +1,10 @@
 shared:
     image: node:8
 jobs:
-    build_foo:
+    success_A:
         steps:
-            - print: echo Starting build_foo!
-        requires: [~pr, ~commit]
-    deploy_foo:
-        steps:
-            - print: echo Starting deploy_foo job!
-        requires: [build_foo]
-    deploy_foo_fail:
+            - print: echo Starting success_A job!
+        requires: [~commit]
+    fail_A:
         steps:
             - fail: exit 1;
