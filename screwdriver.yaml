@@ -8,4 +8,4 @@ jobs:
     fail_A:
         steps:
             - fail: exit 1
-        requires: [~commit]
+        requires: []
