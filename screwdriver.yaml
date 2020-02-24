@@ -3,9 +3,9 @@ shared:
 jobs:
     success_B:
         steps:
-            - print: echo Starting build_bar!
+            - print: echo Starting build_bar
         requires: [~sd@31:success_A]
     fail_B:
         steps:
-            - echo: echo Should not get to this step!
+            - echo: echo Should not get to this step
         requires: [~sd@31:fail_A]
