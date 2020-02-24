@@ -4,8 +4,8 @@ jobs:
     success_B:
         steps:
             - print: echo Starting build_bar!
-        requires: [~sd@7:success_A]
+        requires: [~sd@29:success_A]
     fail_B:
         steps:
             - echo: echo Should not get to this step!
-        requires: [~sd@7:fail_A]
+        requires: [~sd@29:fail_A]
