@@ -3,7 +3,7 @@ shared:
 jobs:
     success_A:
         steps:
-            - print: echo Starting success_A job
+            - print: echo "Starting success_A job"
         requires: [~commit]
     fail_A:
         steps:
