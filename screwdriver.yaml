@@ -3,9 +3,17 @@ shared:
 jobs:
     success_B:
         steps:
-            - print: echo Starting build_bar
+            - print: echo "Starting success_B"
         requires: [~sd@35:success_A]
     fail_B:
         steps:
             - echo: echo Should not get to this step
         requires: [~sd@35:fail_A]
+    parallel_B1:
+        steps:
+            - print: echo "Starting parallel_B1"
+        requires: [~sd@35:parallel_A]
+    parallel_B2:
+        steps:
+            - print: echo "Starting parallel_B2"
+        requires: [~sd@35:parallel_A]
