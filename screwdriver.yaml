@@ -9,3 +9,7 @@ jobs:
         steps:
             - fail: exit 1
         requires: []
+    parallel_A:
+        steps:
+            - print: echo "Starting parallel_A job"
+        requires: []
